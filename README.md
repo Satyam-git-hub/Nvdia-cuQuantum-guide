@@ -79,9 +79,17 @@ docker pull nvcr.io/nvidia/cuquantum-appliance:24.08-cuda12.2.2-devel-ubuntu22.0
 
 ## ▶️ Step 5: Run cuQuantum Appliance Container
 
+### Attached mode
 ```bash
 docker run --gpus all -it --rm \
   nvcr.io/nvidia/cuquantum-appliance:24.08-cuda12.2.2-devel-ubuntu22.04-arm64
+```
+
+### Detached mode (-d)
+```bash
+docker run -d --gpus all --name cuquantum-arm64 \
+  nvcr.io/nvidia/cuquantum-appliance:24.08-cuda12.2.2-devel-ubuntu22.04-arm64 sleep infinity
+
 ```
 
 ---
